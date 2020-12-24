@@ -215,7 +215,7 @@ int do_recording(   uint16_t device_index,
         {     
             frame_number[i]= 1;
 
-            string_time =  stringstream_time.str() + "_M134_kinect_" + to_string(i);
+            string_time =  stringstream_time.str() + "_M133_M134_kinect_" + to_string(i);
             dirname_time[i] = fs::current_path()/"Data/Video"/string_time;
             create_directories(dirname_time[i]);
             cout << "Creating directory to save video : " << dirname_time[i] << "\n" << endl;
@@ -565,7 +565,7 @@ int do_recording(   uint16_t device_index,
         cout << "\nSaving sound buffer ..." << endl;
         rec_song.stop();
         const sf::SoundBuffer& buffer = rec_song.getBuffer();
-        string_time =  stringstream_time.str() + "_M134_kinect_" + to_string(device_zero) + "_son.wav";
+        string_time =  stringstream_time.str() + "_M133_M134_kinect_" + to_string(device_zero) + "_son.wav";
         filename = dirname_time[device_zero] + "/" + string_time;
         buffer.saveToFile(filename);
         cout << "Sound saved\n" << endl;
